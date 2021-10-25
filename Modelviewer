@@ -1,4 +1,4 @@
-<model-viewer src="../../assets/ShopifyModels/Chair.glb" poster="../../assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
+<model-viewer src="../../assets/ShopifyModels/Chair.glb" ios-src="../../assets/ShopifyModels/Chair.usdz"  poster="../../assets/ShopifyModels/Chair.png" shadow-intensity="1" ar ar-modes="webxr scene-viewer quick-look" camera-controls alt="A 3D model carousel">
   
   <button slot="ar-button" id="ar-button">
     View in your space
@@ -33,6 +33,7 @@
   window.switchSrc = (element, name) => {
     const base = "../../assets/ShopifyModels/" + name;
     modelViewer.src = base + '.glb';
+    modelViewer.ios-src = base + '.usdz';
     modelViewer.poster = base + '.png';
     const slides = document.querySelectorAll(".slide");
     slides.forEach((element) => {element.classList.remove("selected");});
